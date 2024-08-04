@@ -1,5 +1,6 @@
 import { getDocuments } from "@/lib/doc";
 import Link from "next/link";
+import 'core-js/actual/array/group-by';
 
 export default function Sidebar() {
     const allDocuments = getDocuments();
