@@ -4,7 +4,7 @@ export default function Footer() {
             <div className="relative h-8"></div>
             <div
                 className="flex flex-col items-center justify-between gap-5 border-t border-zinc-900/5 pt-8 dark:border-white/5 sm:flex-row">
-                <p className="text-xs text-zinc-600 dark:text-zinc-400">
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 text-center ">
                     © Copyright 2024. All rights reserved.
                 </p>
             </div>
