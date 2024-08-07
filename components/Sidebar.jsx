@@ -1,6 +1,16 @@
+function groupBy(array, keyFunction) {
+    return array.reduce((result, item) => {
+        const key = keyFunction(item);
+        if (!result[key]) {
+            result[key] = [];
+        }
+        result[key].push(item);
+        return result;
+    }, {});
+}
+
 import { getDocuments } from "@/lib/doc";
 import Link from "next/link";
-import 'core-js/actual/array/group-by';
 
 export default function Sidebar() {
     const allDocuments = getDocuments();
@@ -8,7 +18,7 @@ export default function Sidebar() {
     const roots = allDocuments.filter(doc => !doc.parent);
     // console.log("root elements:")
     // console.log(roots)
-    const nonRoots = Object.groupBy(
+    const nonRoots = groupBy(
         allDocuments.filter((doc) => doc.parent), ({parent}) => parent
     )
     // console.log("nonRoot elements:")
