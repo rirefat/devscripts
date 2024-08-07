@@ -1,15 +1,5 @@
-function groupBy(array, keyFunction) {
-    return array.reduce((result, item) => {
-        const key = keyFunction(item);
-        if (!result[key]) {
-            result[key] = [];
-        }
-        result[key].push(item);
-        return result;
-    }, {});
-}
-
 import { getDocuments } from "@/lib/doc";
+import groupBy from "@/lib/groupBy";
 import Link from "next/link";
 
 export default function Sidebar() {
