@@ -1,6 +1,6 @@
-export default function Content({ params: { documentId } }) {
-    console.log(documentId)
-    return (
-        <div>{documentId}</div>
-    );
+import ContentDisplay from "@/components/ContentDisplay";
+
+export default function Document({ params: { documentId } }) {
+
+    return <ContentDisplay docId={documentId}/> ;
 }
