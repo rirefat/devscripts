@@ -1,15 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/*.{html,js}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   darkMode: "class",
   theme: {
     fontSize: {
       "2xs": ["0.75rem", { lineHeight: "1.25rem" }],
-      xs: ["0.8125rem", { lineHeight: "1.5rem" }],
-      sm: ["0.875rem", { lineHeight: "1.5rem" }],
-      base: ["1rem", { lineHeight: "1.75rem" }],
-      lg: ["1.125rem", { lineHeight: "1.75rem" }],
-      xl: ["1.25rem", { lineHeight: "1.75rem" }],
+      "xs": ["0.8125rem", { lineHeight: "1.5rem" }],
+      "sm": ["0.875rem", { lineHeight: "1.5rem" }],
+      "base": ["1rem", { lineHeight: "1.75rem" }],
+      "lg": ["1.125rem", { lineHeight: "1.75rem" }],
+      "xl": ["1.25rem", { lineHeight: "1.75rem" }],
       "2xl": ["1.5rem", { lineHeight: "2rem" }],
       "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
       "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
@@ -39,6 +43,11 @@ module.exports = {
         2.5: "0.025",
         7.5: "0.075",
         15: "0.15",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
