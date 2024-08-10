@@ -34,6 +34,8 @@ export default function Sidebar({ docs }) {
             matchedDocs.filter((doc) => doc.parent), ({ parent }) => parent
         );
 
+        
+
         setRootNodes([...roots]);
         setNonRootNodesGrouped({ ...nonRoots });
 
