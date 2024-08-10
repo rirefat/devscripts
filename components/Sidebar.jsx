@@ -1,18 +1,27 @@
-import { getDocuments } from "@/lib/doc";
+'use client'
+
 import groupBy from "@/lib/groupBy";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
-export default function Sidebar() {
-    const allDocuments = getDocuments();
 
-    const roots = allDocuments.filter(doc => !doc.parent);
-    // console.log("root elements:")
-    // console.log(roots)
+export default function Sidebar({docs}) {
+    const pathName = usePathname();
+
+    useEffect(() => {
+        let matchedDocs = docs;
+
+        if(pathName.includes('/tags')){
+            const tag = pathName.split("/")[2];
+        }
+    }, [pathName])
+
+
+    const roots = docs.filter(doc => !doc.parent);
     const nonRoots = groupBy(
-        allDocuments.filter((doc) => doc.parent), ({parent}) => parent
+        docs.filter((doc) => doc.parent), ({ parent }) => parent
     )
-    // console.log("nonRoot elements:")
-    // console.log(nonRoots)
 
     return (
         <nav className="lg:block my-10">

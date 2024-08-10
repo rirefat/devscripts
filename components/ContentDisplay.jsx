@@ -5,13 +5,13 @@ import Tag from "./Tag";
 
 const ContentDisplay = async ({ docId }) => {
     const documentContent = await getDocumentContent(docId);
-    console.log(documentContent)
+
     return (
         <article class="prose dark:prose-invert">
             <h1>{documentContent.title}</h1>
 
             <div>
-                <span>Published On: {documentContent.date}</span> by {" "}
+                <span>Published on {documentContent.date}</span> by {" "}
                 <Link href={`/authors/${documentContent.author}`}>
                     {documentContent.author}
                 </Link> {" "}
@@ -23,8 +23,10 @@ const ContentDisplay = async ({ docId }) => {
             </div>
 
             <div>
-                {documentContent.tags &&
-                    documentContent.tags.map((tag) => <Tag key={tag} tag={tag} />)}
+                {
+                    documentContent.tags &&
+                    documentContent.tags.map((tag) => <Tag key={tag} tag={tag} />)
+                }
             </div>
 
             <div

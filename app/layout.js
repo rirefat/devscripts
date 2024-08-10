@@ -12,14 +12,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // const allDocuments = getDocuments();
+  const allDocuments = getDocuments();
 
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="h-full lg:ml-72 xl:ml-80">
           {/* Header Section */}
-          <Header />
+          <Header docs={allDocuments}/>
 
           {/* Main Section */}
           <div className="relative px-4 pt-14 sm:px-6 lg:px-8">
