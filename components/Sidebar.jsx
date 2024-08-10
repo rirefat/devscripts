@@ -1,27 +1,45 @@
 'use client'
-
+import { docFilterByAuthor, docFilterByCategory, docFilterByTag } from "@/lib/docFilter";
 import groupBy from "@/lib/groupBy";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
-export default function Sidebar({docs}) {
+export default function Sidebar({ docs }) {
     const pathName = usePathname();
+    const [rootNodes, setRootNodes] = useState([]);
+    const [nonRootNodesGrouped, setNonRootNodesGrouped] = useState({});
 
     useEffect(() => {
         let matchedDocs = docs;
 
-        if(pathName.includes('/tags')){
+        if (pathName.includes('/tags')) {
             const tag = pathName.split("/")[2];
+            matchedDocs = docFilterByTag(docs, tag);
+
+        } else if (pathName.includes('/authors')) {
+            const author = pathName.split("/")[2];
+            matchedDocs = docFilterByAuthor(docs, author);
+
+        } else if (pathName.includes('/categories')) {
+            const category = pathName.split("/")[2];
+            matchedDocs = docFilterByCategory(docs, category);
+
         }
-    }, [pathName])
 
 
-    const roots = docs.filter(doc => !doc.parent);
-    const nonRoots = groupBy(
-        docs.filter((doc) => doc.parent), ({ parent }) => parent
-    )
+        const roots = matchedDocs.filter(doc => !doc.parent);
+        const nonRoots = groupBy(
+            matchedDocs.filter((doc) => doc.parent), ({ parent }) => parent
+        );
+
+        setRootNodes([...roots]);
+        setNonRootNodesGrouped({ ...nonRoots });
+
+    }, [pathName, docs])
+
+
 
     return (
         <nav className="lg:block my-10">
@@ -31,7 +49,7 @@ export default function Sidebar({docs}) {
                     <div className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
                     <div className="absolute left-2 h-6 w-px bg-emerald-500"></div>
                     <ul role="list" className="border-l border-transparent">
-                        {roots.map((rootNode) => (
+                        {rootNodes.map((rootNode) => (
                             <li key={rootNode.id} className="relative">
                                 <Link
                                     aria-current="page"
@@ -42,12 +60,12 @@ export default function Sidebar({docs}) {
                                         {rootNode.title}
                                     </span>
                                 </Link>
-                                {nonRoots[rootNode.id] && (
+                                {nonRootNodesGrouped[rootNode.id] && (
                                     <ul
                                         role="list"
                                         className="border-l border-transparent"
                                     >
-                                        {nonRoots[rootNode.id].map(
+                                        {nonRootNodesGrouped[rootNode.id].map(
                                             (subRoot) => (
                                                 <li key={subRoot.id}>
                                                     <Link
