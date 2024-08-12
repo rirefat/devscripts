@@ -50,10 +50,12 @@ export default function Search({ docs }) {
                     onChange={handleChange}
                 />
                 <kbd className="ml-auto w-auto text-2xs text-zinc-400 dark:text-zinc-500">
-                    <kbd
-                        onClick={() => setTerm("")}
-                        className="font-sans">Clear Search
-                    </kbd>
+                    {term && term.trim().length > 0 && (
+                        <kbd
+                            onClick={() => setTerm("")}
+                            className="font-sans">Clear Search
+                        </kbd>
+                    )}
                 </kbd>
             </button>
 
