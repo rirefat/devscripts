@@ -4,8 +4,8 @@ date: '2024-08-12'
 parent: null
 order: 10
 author: Rafiul Refat
-category: programming
-tags: ["technology", "programming"]
+category: Javascript
+tags: ["technology", "programming", "javascript"]
 ---
 
 ## JavaScript: The Language That Powers the Web
