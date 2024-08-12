@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 
-const SearchResult = ({ results, term }) => {
+const SearchResult = ({ results, term, closeSearchResult }) => {
 
     return (
         <div
@@ -9,7 +9,7 @@ const SearchResult = ({ results, term }) => {
         >
             <p className="text-sm font-light">
                 Showing results for
-                <span className="font-semibold px-2">keyword :</span>
+                <span className="font-semibold px-2 text-green-950">keyword :</span>
                 {term}
             </p>
             <ul role="list" className="divide-y divide-gray-100 [&>*]:py-2">
@@ -19,6 +19,7 @@ const SearchResult = ({ results, term }) => {
                             <Link
                                 className="transition-all hover:text-emerald-600"
                                 href={`/docs/${result.id}`}
+                                onClick={(e) => closeSearchResult(e)}
                             >
                                 {result.title}
                             </Link>

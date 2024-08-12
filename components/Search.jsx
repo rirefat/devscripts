@@ -3,10 +3,12 @@ import { useDebounce } from "@/hooks/useDebounce";
 import Image from "next/image";
 import { useState } from "react";
 import SearchResult from "./SearchResult";
+import { useRouter } from "next/navigation";
 
 export default function Search({ docs }) {
     const [searchResult, setSearchResult] = useState([]);
     const [term, setTerm] = useState("");
+    const router = useRouter();
 
     const handleChange = (event) => {
         const value = event.target.value;
@@ -20,7 +22,13 @@ export default function Search({ docs }) {
         })
         setSearchResult(found);
         console.log(found);
-    }, 500)
+    }, 500);
+
+    const closeSearchResult = (event) => {
+        event.preventDefault();
+        setTerm("");
+        router.push(event.target.href)
+    }
 
     return (
         <div class="relative hidden lg:block lg:max-w-md lg:flex-auto">
@@ -48,7 +56,11 @@ export default function Search({ docs }) {
 
             {/* Search Result card */}
             {term && term.trim().length > 0 && (
-                <SearchResult results={searchResult} term={term} />
+                <SearchResult
+                    results={searchResult}
+                    term={term}
+                    closeSearchResult={closeSearchResult}
+                />
             )}
         </div>
     );
