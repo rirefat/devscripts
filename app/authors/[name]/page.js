@@ -8,7 +8,6 @@ export default function AuthorPage({ params: { name } }) {
 
     return (
         <div>
-            {/* {decodeURIComponent(name)} */}
             <ContentDisplay docId={matchedDocs[0].id}/>
         </div>
     );
