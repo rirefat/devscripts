@@ -4,7 +4,7 @@ import { getDocuments } from "@/lib/doc";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Suspense } from "react";
-import Loading from "@/components/Loading";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
