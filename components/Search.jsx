@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import SearchResult from "./SearchResult";
 import { useRouter } from "next/navigation";
+import EmptyCard from "./EmptyCard";
 
 export default function Search({ docs }) {
     const [searchResult, setSearchResult] = useState([]);
@@ -56,11 +57,12 @@ export default function Search({ docs }) {
 
             {/* Search Result card */}
             {term && term.trim().length > 0 && (
-                <SearchResult
-                    results={searchResult}
-                    term={term}
-                    closeSearchResult={closeSearchResult}
-                />
+                searchResult.length > 0 ?
+                    <SearchResult
+                        results={searchResult}
+                        term={term}
+                        closeSearchResult={closeSearchResult}
+                    /> : <EmptyCard/>
             )}
         </div>
     );
