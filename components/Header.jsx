@@ -17,7 +17,7 @@ export default function Header({ docs }) {
                 style={{ "--bg-opacity-light": 0.5, "--bg-opacity-dark": 0.2 }}>
                 <div className="container flex h-14 items-center justify-between gap-12">
                     <div className="absolute inset-x-0 top-full h-px bg-zinc-900/7.5 transition dark:bg-white/7.5"></div>
-                    <Search />
+                    <Search docs={docs}/>
 
                     <Link href={'https://github.com/rirefat/devscripts'} target="_blank">
                         <FaGithub size={'1.8em'}/>
