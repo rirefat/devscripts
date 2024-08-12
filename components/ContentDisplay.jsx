@@ -14,15 +14,15 @@ const ContentDisplay = async ({ docId }) => {
                 <h1>{documentContent.title}</h1>
 
                 <div>
-                    <span>Published on {documentContent.date}</span> by {" "}
-                    <Link href={`/authors/${documentContent.author}`}>
-                        {documentContent.author}
-                    </Link> {" "}
-                    under the{" "}
-                    <Link href={`/categories/${documentContent.category}`}>
-                        {documentContent.category}
-                    </Link>{" "}
-                    category.
+                    {
+                        documentContent.date && <span>{`Published on ${documentContent.date} by `}</span>
+                    }
+                    {
+                        documentContent.author && <><Link href={`/authors/${documentContent.author}`}>{`${documentContent.author} `}</Link> <span>under the </span></>
+                    }
+                    {
+                        documentContent.category && <><Link href={`/categories/${documentContent.category}`}>{`${documentContent.category} `}</Link><span>category.</span></>
+                    }
                 </div>
 
                 <div>

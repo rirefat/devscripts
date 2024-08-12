@@ -1,4 +1,14 @@
-# Welcome to DevScripts
+---
+title: 'Introduction'
+date: null
+parent: null
+order: 1
+author: null
+category: null
+tags: []
+---
+
+## Welcome to DevScripts
 
 ## Your Gateway to Cutting-Edge Technology and Web Development
 
