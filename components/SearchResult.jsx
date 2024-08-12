@@ -9,8 +9,7 @@ const SearchResult = ({ results, term, closeSearchResult }) => {
         >
             <p className="text-sm font-light">
                 Showing results for
-                <span className="font-semibold px-2 text-green-950">keyword :</span>
-                {term}
+                <span className="font-semibold px-2 text-green-950">{term} :</span>                
             </p>
             <ul role="list" className="divide-y divide-gray-100 [&>*]:py-2">
                 {

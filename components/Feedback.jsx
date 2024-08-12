@@ -28,7 +28,7 @@ const Feedback = () => {
                 class="absolute inset-0 flex items-center justify-center gap-6 md:justify-start"
             >
                 <p class="text-sm text-zinc-600 dark:text-zinc-400">
-                    Was this page helpful?
+                    Was this content helpful?
                 </p>
                 <div
                     class="group grid h-8 grid-cols-[1fr,1px,1fr] overflow-hidden rounded-full border border-zinc-900/10 dark:border-white/10"
