@@ -49,10 +49,12 @@ export default function Search({ docs }) {
                     value={term}
                     onChange={handleChange}
                 />
-                {/* <kbd className="ml-auto w-auto text-2xs text-zinc-400 dark:text-zinc-500">
-                    <kbd className="font-sans">Ctrl </kbd>
-                    <kbd className="font-sans">K</kbd>
-                </kbd> */}
+                <kbd className="ml-auto w-auto text-2xs text-zinc-400 dark:text-zinc-500">
+                    <kbd
+                        onClick={() => setTerm("")}
+                        className="font-sans">Clear Search
+                    </kbd>
+                </kbd>
             </button>
 
             {/* Search Result card */}
@@ -62,7 +64,7 @@ export default function Search({ docs }) {
                         results={searchResult}
                         term={term}
                         closeSearchResult={closeSearchResult}
-                    /> : <EmptyCard/>
+                    /> : <EmptyCard />
             )}
         </div>
     );
