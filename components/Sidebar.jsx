@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function Sidebar({ docs }) {
+export default function Sidebar({ docs, showDropdown }) {
     const pathName = usePathname();
     const [rootNodes, setRootNodes] = useState([]);
     const [nonRootNodesGrouped, setNonRootNodesGrouped] = useState({});
@@ -59,8 +59,8 @@ export default function Sidebar({ docs }) {
     const isActive = (href) => pathName === href;
 
     return (
-        <nav className="lg:block my-10">
-            <ul>
+        <nav className={`${showDropdown ? "" : "hidden"} lg:block my-10`}>
+            <ul className={`${showDropdown ? "fixed z-50 bg-slate-50 pr-8 pl-2 py-4 max-w-full rounded-lg shadow-lg" : ""}`}>
                 <div className="relative mt-3 pl-2">
                     <div className="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"></div>
                     <div className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>

@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import Logo from "./Logo";
 import Search from "./Search";
@@ -5,8 +6,13 @@ import Sidebar from "./Sidebar";
 import { FaGithub } from "react-icons/fa6";
 import Image from "next/image";
 import ResponsiveSearch from "./ResponsiveSearch";
+import { useState } from "react";
 
 export default function Header({ docs }) {
+    const [showDropdown, setShowDropdown] = useState(false);
+    const handleDropdown = () => {
+        setShowDropdown((state) => !state)
+    }
     return (
         <header className="fixed inset-y-0 left-0 z-40 contents w-72 overflow-y-auto border-r border-zinc-900/10 px-6 pb-8 pt-4 dark:border-white/10 lg:block xl:w-80">
             {/* logo part*/}
@@ -26,7 +32,7 @@ export default function Header({ docs }) {
                         <button type="button"
                             className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
                             aria-label="Toggle navigation">
-                            <Image src="/hamburger.svg" height={25} width={25} alt="Menu" className="w-4 stroke-zinc-900 dark:stroke-white" />
+                            <Image onClick={handleDropdown} src="/hamburger.svg" height={25} width={25} alt="Menu" className="w-4 stroke-zinc-900 dark:stroke-white" />
                         </button>
                         <ResponsiveSearch docs={docs} />
                     </div>
@@ -38,7 +44,7 @@ export default function Header({ docs }) {
             {/* Header section ends here */}
 
             {/* Sidebar Section */}
-            <Sidebar docs={docs} />
+            <Sidebar docs={docs} showDropdown={showDropdown} />
             {/* Sidebar Section Ends */}
         </header>
     );
