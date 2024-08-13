@@ -29,6 +29,7 @@ export default function Header({ docs }) {
                     <div className="absolute inset-x-0 top-full h-px bg-zinc-900/7.5 transition dark:bg-white/7.5"></div>
                     <Search docs={docs} />
 
+                    {/* Responsive header starts */}
                     <div className="flex items-center gap-5 lg:hidden">
                         <button type="button"
                             className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
@@ -37,6 +38,8 @@ export default function Header({ docs }) {
                         </button>
                         <ResponsiveSearch docs={docs} />
                     </div>
+                    {/* Responsive header ends */}
+
                     <Link href={'https://github.com/rirefat/devscripts'} target="_blank">
                         <FaGithub size={'1.8em'} />
                     </Link>

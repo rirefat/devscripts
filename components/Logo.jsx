@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export default function Logo() {
     return (
-        <div className="hidden lg:flex">
-            <Link aria-label="Home" href="/" className="flex gap-1">
+        <div className="hidden lg:block">
+            <Link aria-label="Home" href="/">
                 <Image
-                    src="/logo.png"
+                    src="/logo-full.png"
                     alt="DevScript"
-                    className="h-6 w-auto"
+                    className="w-48 h-auto flex items-center justify-center"
                     width={250}
                     height={250}
                     priority
                 />
-                <span className="font-bold">DevScript</span>
+                {/* <span className="font-bold">DevScript</span> */}
             </Link>
         </div>
     );
