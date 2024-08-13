@@ -32,7 +32,7 @@ export default function Header({ docs }) {
                         <button type="button"
                             className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
                             aria-label="Toggle navigation">
-                            <Image onClick={handleDropdown} src="/hamburger.svg" height={25} width={25} alt="Menu" className="w-4 stroke-zinc-900 dark:stroke-white" />
+                            <Image onClick={handleDropdown} src={`${showDropdown ? '/close.svg':'/hamburger.svg'}`} height={50} width={50} alt="Menu" className={`${showDropdown ? 'w-20':'w-4'}  stroke-zinc-900 dark:stroke-white`} />
                         </button>
                         <ResponsiveSearch docs={docs} />
                     </div>

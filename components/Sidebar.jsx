@@ -4,6 +4,7 @@ import groupBy from "@/lib/groupBy";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 export default function Sidebar({ docs, showDropdown }) {
     const pathName = usePathname();
@@ -60,6 +61,7 @@ export default function Sidebar({ docs, showDropdown }) {
 
     return (
         <nav className={`${showDropdown ? "" : "hidden"} lg:block my-10`}>
+            {/* <Logo /> */}
             <ul className={`${showDropdown ? "fixed z-50 bg-slate-50 pr-8 pl-2 py-4 max-w-full rounded-lg shadow-lg" : ""}`}>
                 <div className="relative mt-3 pl-2">
                     <div className="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"></div>
