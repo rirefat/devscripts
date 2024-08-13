@@ -3,6 +3,8 @@ import Logo from "./Logo";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
 import { FaGithub } from "react-icons/fa6";
+import Image from "next/image";
+import ResponsiveSearch from "./ResponsiveSearch";
 
 export default function Header({ docs }) {
     return (
@@ -17,10 +19,19 @@ export default function Header({ docs }) {
                 style={{ "--bg-opacity-light": 0.5, "--bg-opacity-dark": 0.2 }}>
                 <div className="container flex h-14 items-center justify-between gap-12">
                     <div className="absolute inset-x-0 top-full h-px bg-zinc-900/7.5 transition dark:bg-white/7.5"></div>
-                    <Search docs={docs}/>
+                    <Search docs={docs} />
 
+
+                    <div className="flex items-center gap-5 lg:hidden">
+                        <button type="button"
+                            className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
+                            aria-label="Toggle navigation">
+                            <Image src="/hamburger.svg" height={25} width={25} alt="Menu" className="w-4 stroke-zinc-900 dark:stroke-white" />
+                        </button>
+                        <ResponsiveSearch docs={docs} />
+                    </div>
                     <Link href={'https://github.com/rirefat/devscripts'} target="_blank">
-                        <FaGithub size={'1.8em'}/>
+                        <FaGithub size={'1.8em'} />
                     </Link>
                 </div>
             </div>

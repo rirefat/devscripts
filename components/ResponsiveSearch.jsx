@@ -6,7 +6,7 @@ import SearchResult from "./SearchResult";
 import { useRouter } from "next/navigation";
 import EmptyCard from "./EmptyCard";
 
-export default function Search({ docs }) {
+export default function ResponsiveSearch({ docs }) {
     const [searchResult, setSearchResult] = useState([]);
     const [term, setTerm] = useState("");
     const router = useRouter();
@@ -32,9 +32,11 @@ export default function Search({ docs }) {
     }
 
     return (
-        <div className="relative hidden lg:block lg:max-w-md lg:flex-auto">
-            <button type="button"
-                className="focus:[&amp;:not(:focus-visible)]:outline-none hidden h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20 lg:flex">
+        <div className="relative max-w-md flex-auto">
+            <button
+                type="button"
+                className="focus:[&amp;:not(:focus-visible)]:outline-none h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20 flex"
+            >
                 <Image
                     src="/search.svg"
                     alt="Search"
@@ -56,8 +58,9 @@ export default function Search({ docs }) {
                             className="font-sans">Clear Search
                         </kbd>
                     )}
-                </kbd>
+                </kbd >
             </button>
+
 
             {/* Search Result card */}
             {term && term.trim().length > 0 && (
