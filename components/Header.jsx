@@ -10,9 +10,11 @@ import { useState } from "react";
 
 export default function Header({ docs }) {
     const [showDropdown, setShowDropdown] = useState(false);
+
     const handleDropdown = () => {
-        setShowDropdown((state) => !state)
+        setShowDropdown((state) => !state);
     }
+
     return (
         <header className="fixed inset-y-0 left-0 z-40 contents w-72 overflow-y-auto border-r border-zinc-900/10 px-6 pb-8 pt-4 dark:border-white/10 lg:block xl:w-80">
             {/* logo part*/}
@@ -27,12 +29,11 @@ export default function Header({ docs }) {
                     <div className="absolute inset-x-0 top-full h-px bg-zinc-900/7.5 transition dark:bg-white/7.5"></div>
                     <Search docs={docs} />
 
-
                     <div className="flex items-center gap-5 lg:hidden">
                         <button type="button"
                             className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
                             aria-label="Toggle navigation">
-                            <Image onClick={handleDropdown} src={`${showDropdown ? '/close.svg':'/hamburger.svg'}`} height={50} width={50} alt="Menu" className={`${showDropdown ? 'w-20':'w-4'}  stroke-zinc-900 dark:stroke-white`} />
+                            <Image onClick={handleDropdown} src={`${showDropdown ? '/close.svg' : '/hamburger.svg'}`} height={50} width={50} alt="Menu" className={`${showDropdown ? 'w-20' : 'w-4'}  stroke-zinc-900 dark:stroke-white`} />
                         </button>
                         <ResponsiveSearch docs={docs} />
                     </div>
@@ -44,7 +45,7 @@ export default function Header({ docs }) {
             {/* Header section ends here */}
 
             {/* Sidebar Section */}
-            <Sidebar docs={docs} showDropdown={showDropdown} />
+            <Sidebar docs={docs} showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
             {/* Sidebar Section Ends */}
         </header>
     );

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 
-export default function Sidebar({ docs, showDropdown }) {
+export default function Sidebar({ docs, showDropdown, setShowDropdown }) {
     const pathName = usePathname();
     const [rootNodes, setRootNodes] = useState([]);
     const [nonRootNodesGrouped, setNonRootNodesGrouped] = useState({});
@@ -68,7 +68,7 @@ export default function Sidebar({ docs, showDropdown }) {
                     <div className="absolute inset-y-0 left-2 w-px bg-zinc-900/10 dark:bg-white/5"></div>
                     <ul role="list" className="border-l border-transparent">
                         {rootNodes.map((rootNode) => (
-                            <li key={rootNode.id} className="relative">
+                            <li key={rootNode.id} className="relative" onClick={(state) => setShowDropdown(!state)}>
                                 {isActive(`/docs/${rootNode.id}`) && (
                                     <div className="absolute left-0 h-6 w-px bg-emerald-500"></div>
                                 )}
