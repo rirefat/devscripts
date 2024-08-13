@@ -37,9 +37,9 @@ export default function ResponsiveSearch({ docs }) {
         <div className="relative max-w-md flex items-center gap-4">
             <Link aria-label="Home" href="/">
                 <Image
-                    src="/logo-full.png"
+                    src="/logo.png"
                     alt="DevScript"
-                    className="w-48 h-auto flex items-center justify-center"
+                    className="w-16 h-auto flex items-center justify-center"
                     width={250}
                     height={250}
                     priority
@@ -69,7 +69,7 @@ export default function ResponsiveSearch({ docs }) {
                         <kbd
                             onClick={() => setTerm("")}
                             className="font-sans">
-                                Clear
+                            Clear
                         </kbd>
                     )}
                 </kbd >
