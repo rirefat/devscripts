@@ -2,7 +2,7 @@
 title: 'JavaScript'
 date: '2024-08-12'
 parent: null
-order: 10
+order: 4
 author: Rafiul Refat
 category: Javascript
 tags: ["technology", "programming", "javascript"]

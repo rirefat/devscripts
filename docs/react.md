@@ -2,7 +2,7 @@
 title: 'React JS'
 date: '2024-08-12'
 parent: null
-order: 18
+order: 5
 author: Rafiul Refat
 category: web development
 tags: ["javascript", "optimization", "web development"]
