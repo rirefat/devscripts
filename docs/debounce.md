@@ -56,7 +56,7 @@ In this example, the search function only executes 300 milliseconds after the us
 
 #### Example 2: Window Resize Event
 Handling the window resize event is another common use case for debounce. Without debounce, the resize handler could be called hundreds of times during a single resize operation, potentially causing significant performance issues.
-```
+```javascript
 function debounce(func, delay) {
     let timeoutId;
     return function(...args) {
@@ -83,7 +83,7 @@ Here, the resize event handler is only executed once the user has finished resiz
 While there are many libraries that provide debounce functionality, such as Lodash, you can easily create your own custom debounce function, as demonstrated in the examples above. This function can be tailored to specific needs, such as adding immediate execution on the leading edge or canceling the debounced function.
 
 Here’s an extended version of the custom debounce function with an option to execute the function immediately:
-```
+```javascript
 function debounce(func, delay, immediate = false) {
     let timeoutId;
     return function(...args) {
