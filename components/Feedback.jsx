@@ -23,25 +23,25 @@ const Feedback = () => {
         )
     }
     return (
-        <div class="relative h-8">
+        <div className="relative h-8">
             <div
-                class="absolute inset-0 flex items-center justify-center gap-6 md:justify-start"
+                className="absolute inset-0 flex items-center justify-center gap-6 md:justify-start"
             >
-                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
                     Was this content helpful?
                 </p>
                 <div
-                    class="group grid h-8 grid-cols-[1fr,1px,1fr] overflow-hidden rounded-full border border-zinc-900/10 dark:border-white/10"
+                    className="group grid h-8 grid-cols-[1fr,1px,1fr] overflow-hidden rounded-full border border-zinc-900/10 dark:border-white/10"
                 >
                     <button
-                        class="px-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white"
+                        className="px-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white"
                         onClick={positiveFeedback}
                     >
                         Yes
                     </button>
-                    <div class="bg-zinc-900/10 dark:bg-white/10"></div>
+                    <div className="bg-zinc-900/10 dark:bg-white/10"></div>
                     <button
-                        class="px-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white"
+                        className="px-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white"
                         onClick={negativeFeedback}
                     >
                         No
