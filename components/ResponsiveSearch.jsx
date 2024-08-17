@@ -39,7 +39,7 @@ export default function ResponsiveSearch({ docs }) {
                 <Image
                     src="/logo.png"
                     alt="DevScript"
-                    className="w-16 h-auto flex items-center justify-center"
+                    className="w-16 h-auto object-cover flex items-center justify-center bg-transparent"
                     width={250}
                     height={250}
                     priority
