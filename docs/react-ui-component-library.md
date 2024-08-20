@@ -2,7 +2,7 @@
 title: '10 Most Popular React UI Component Libraries'
 date: '2024-08-20'
 parent: 'react'
-order: 6
+order: 2
 author: Rafiul Refat
 category: web development
 tags: ["react", "ui components", "web development", "frontend"]
@@ -11,8 +11,6 @@ tags: ["react", "ui components", "web development", "frontend"]
 # Top 10 Popular React UI Component Libraries
 
 ## Table of Contents
-- [Top 10 Popular React UI Component Libraries](#top-10-popular-react-ui-component-libraries)
-  - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [1. Material-UI (MUI)](#1-material-ui-mui)
   - [2. Ant Design](#2-ant-design)
@@ -26,7 +24,6 @@ tags: ["react", "ui components", "web development", "frontend"]
   - [10. Grommet](#10-grommet)
   - [Conclusion](#conclusion)
 
----
 
 ## Introduction
 
