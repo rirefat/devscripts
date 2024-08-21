@@ -102,12 +102,13 @@ An **asynchronous callback** is executed after a certain event or task is comple
 
 
 ## Key Differences Between Sync and Async Callbacks
+- Execution Timing:
+    1. **Synchronous Callback:** Executed immediately, in sequence.
+    2. **Asynchronous Callback:** Executed after a task is completed or a delay.
 
-| Feature                | Synchronous Callback                      | Asynchronous Callback                         |
-|------------------------|-------------------------------------------|-----------------------------------------------|
-| **Execution Timing**   | Executed immediately, in sequence.        | Executed after a task is completed or a delay.|
-| **Code Blocking**      | Yes, it blocks subsequent code execution. | No, it allows subsequent code to run.         |
-| **Use Case Examples**  | Array methods, simple functions.          | Network requests, timers, I/O operations.     |
+- Code Blocking:
+    1. **Synchronous Callback:** Yes, it blocks subsequent code execution.
+    2. **Asynchronous Callback:** No, it allows subsequent code to run
 
 
 ## Use Cases
