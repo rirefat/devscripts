@@ -2,7 +2,7 @@
 title: 'Sync and Async Callbacks in JavaScript'
 date: '2024-08-22'
 parent: javascript
-order: 2
+order: 1
 author: Rafiul Refat
 category: web development
 tags: ["Callbacks", "JavaScript", "Asynchronous Programming", "Synchronous Programming" ]

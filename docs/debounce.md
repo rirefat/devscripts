@@ -2,7 +2,7 @@
 title: 'Debounce in JavaScript'
 date: '2024-08-12'
 parent: javascript
-order: 4
+order: 2
 author: Rafiul Refat
 category: programming
 tags: ["javascript", "optimization", "web development"]
