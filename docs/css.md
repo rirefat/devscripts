@@ -1,11 +1,11 @@
 ---
 title: 'CSS'
-date: '2024-08-20'
+date: null
 parent: null
 order: 2
-author: Rafiul Refat
-category: web development
-tags: ["css", "technology", "web development"]
+author: null
+category: null
+tags: []
 ---
 
 ## Introduction to CSS (Cascading Style Sheets)
