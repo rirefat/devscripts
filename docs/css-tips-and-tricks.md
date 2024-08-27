@@ -1,5 +1,5 @@
 ---
-title: '10 Unique CSS Tips and Tricks for Developers'
+title: '10 Unique CSS Tips and Tricks'
 date: '2024-08-20'
 parent: css
 order: 1

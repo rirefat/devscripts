@@ -1,5 +1,5 @@
 ---
-title: '10 Most Popular React UI Component Libraries'
+title: '10 React UI Component Libraries'
 date: '2024-08-20'
 parent: 'react'
 order: 2
