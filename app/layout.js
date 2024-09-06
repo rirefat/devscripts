@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Suspense } from "react";
 import Loading from "./loading";
-import Guides from "@/components/guides";
+import Guides from "@/components/Guides";
 
 const inter = Inter({ subsets: ["latin"] });
 
