@@ -5,7 +5,7 @@ parent: 'javascript'
 order: 3
 author: Rafiul Refat
 category: web development
-tags: ["react", "ui components", "web development", "frontend"]
+tags: ["JavaScript", "Function Methods", "this Context", "web development"]
 ---
 
 ## Understanding call, apply, and bind in JavaScript
