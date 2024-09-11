@@ -40,9 +40,14 @@ export default function Header({ docs }) {
                     </div>
                     {/* Responsive header ends */}
 
-                    <Link href={'https://github.com/rirefat/devscripts'} target="_blank">
-                        <FaGithub size={'1.8em'} />
-                    </Link>
+                    <span className="flex gap-4">
+                        <Link href='' target="_blank">
+                            <FaGithub size={'1.8em'} />
+                        </Link>
+                        <Link href={'https://github.com/rirefat/devscripts'} target="_blank">
+                            <FaGithub size={'1.8em'} />
+                        </Link>
+                    </span>
                 </div>
             </div>
             {/* Header section ends here */}
