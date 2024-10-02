@@ -1,6 +1,8 @@
 ---
 title: "Geolocation API in JavaScript"
 date: "2024-09-13"
+parent: javascript
+order: 4
 author: "Rafiul Refat"
 category: "Web Development"
 tags: ["javascript", "geolocation", "web api", "frontend"]
