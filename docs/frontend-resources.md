@@ -8,28 +8,7 @@ category: web development
 tags: ["web development", "design resources", "free resources" ]
 ---
 
-## Front-End Resources
-
-- [Front-End Resources](#front-end-resources)
-- [Get Started](#get-started)
-  - [CSS Frameworks](#css-frameworks)
-  - [Illustrations](#illustrations)
-  - [Free images](#free-images)
-  - [Icons](#icons)
-  - [Fonts](#fonts)
-  - [Code Validator](#code-validator)
-  - [Code Formatter](#code-formatter)
-  - [Responsive Checker](#responsive-checker)
-    - [Website Speed](#website-speed)
-    - [Favicon Generator](#favicon-generator)
-  - [Deployement](#deployement)
-    - [Free API](#free-api)
-    - [Design Tools](#design-tools)
-    - [Play and Learn](#play-and-learn)
-    - [Job Sites](#job-sites)
-    - [Interesting API services](#interesting-api-services)
-
-## Get Started
+## Front-End Resources For Web Development
 
 ### CSS Frameworks
 
