@@ -4,6 +4,8 @@ import Logo from "./Logo";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
 import { FaGithub } from "react-icons/fa6";
+import { MdSunny } from "react-icons/md";
+import { IoMdMoon } from "react-icons/io";
 import Image from "next/image";
 import ResponsiveSearch from "./ResponsiveSearch";
 import { useState } from "react";
@@ -41,9 +43,10 @@ export default function Header({ docs }) {
                     {/* Responsive header ends */}
 
                     <span className="flex gap-4">
-                        <Link href='' target="_blank">
-                            <FaGithub size={'1.8em'} />
-                        </Link>
+                        <span className="cursor-pointer">
+                            <MdSunny  size={'1.8em'} />
+                            <IoMdMoon  size={'1.8em'} />
+                        </span>
                         <Link href={'https://github.com/rirefat/devscripts'} target="_blank">
                             <FaGithub size={'1.8em'} />
                         </Link>

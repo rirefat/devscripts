@@ -95,8 +95,8 @@ export default function Sidebar({ docs, showDropdown, setShowDropdown }) {
                                                         className={`flex justify-between gap-2 py-1 pl-7 pr-3 text-sm transition ${isActive(`/docs/${rootNode.id}/${subRoot.id}`) ? 'text-emerald-500 font-bold' : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white'}`}
                                                         href={`/docs/${rootNode.id}/${subRoot.id}`}
                                                     >
-                                                        <span className="truncate" title={subRoot.title}>
-                                                            {subRoot.title}
+                                                        <span className="" title={subRoot.title}>
+                                                        ● {subRoot.title}
                                                         </span>
                                                     </Link>
                                                 </li>
