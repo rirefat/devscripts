@@ -67,7 +67,7 @@ const multiply = (a, b) => a * b;
 **Key difference:** Arrow functions do not have their own this context. They inherit this from the surrounding code, making them ideal for callbacks and avoiding errors with traditional function scoping.
 
 ### Classes:
-ES6 introduced classes to replace constructor functions and provide a cleaner syntax for defining object-oriented structures.
+ES6 introduced classes to replace constructor functions and provide a cleaner syntax for defining **object-oriented structures**.
 
 ```javascript
 // ES5
@@ -90,6 +90,61 @@ class Person {
 }
 ```
 **Key difference:** ES6 classes are syntactic sugar over ES5’s constructor functions but provide a clearer and more intuitive structure for inheritance and object creation.
+
+### Modules:
+ES6 brought native module support with import and export keywords, improving the way JavaScript manages dependencies and code modularity.
+
+```javascript
+// ES5
+// No native support for modules, relies on libraries like CommonJS or RequireJS
+
+// ES6
+// math.js
+export const add = (a, b) => a + b;
+
+// main.js
+import { add } from './math.js';
+```
+**Key difference:** ES6 introduced built-in module management, which simplifies code splitting and dependency management in large applications.
+
+### Template Literals:
+Template literals provide an easier way to work with strings and embedded expressions. In ES5, string concatenation was cumbersome.
+
+```javascript
+// ES5
+var name = "John";
+var greeting = "Hello " + name + ", welcome!";
+
+// ES6
+const name = "John";
+const greeting = `Hello ${name}, welcome!`;
+```
+***Key difference:*** ES6 allows multi-line strings and string interpolation using backticks (`), making string manipulation more readable.
+
+### Destructuring:
+Destructuring in ES6 allows you to extract values from *arrays* and *objects* into distinct variables in a much cleaner way.
+
+```javascript
+// ES5 Object Destructuring
+var person = { name: 'John', age: 30 };
+var name = person.name;
+var age = person.age;
+
+// ES6 Object Destructuring
+const { name, age } = person;
+
+// ES6 Array Destructuring
+const numbers = [10, 20, 30];
+
+// Extracting values using destructuring
+const [first, second, third] = numbers;
+
+console.log(first);  // Output: 10
+console.log(second); // Output: 20
+console.log(third);  // Output: 30
+```
+
+**Key difference:** Destructuring in ES6 simplifies variable assignment and makes code cleaner by avoiding repetitive code when accessing object properties.
 
 
 ## Conclusion
